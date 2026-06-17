@@ -17,6 +17,7 @@ The application lets users:
 ```text
 .
 ├── index.html
+├── README.md
 ├── style.css
 └── index.js
 ```
@@ -38,7 +39,11 @@ Simply open `index.html` in a browser.
 
 ## Winning Test
 
-In `index.js`, a commented section lets you temporarily replace the random draw with a fixed grid:
+The form includes a discreet `Dev mode: win` checkbox.
+
+When checked, the draw is forced to match the submitted grid after validation, making it easy to test the winning message.
+
+In `index.js`, a commented section also lets you temporarily replace the random draw with a fixed grid:
 
 ```js
 // const winningNumbers = [1, 2, 3, 4, 5, 6];

@@ -74,6 +74,21 @@ input:focus {
   margin-bottom: 0;
 }
 
+.dev-mode {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 16px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #52606d;
+}
+
+.dev-mode input {
+  width: auto;
+  margin: 0;
+}
+
 button {
   width: 100%;
   padding: 12px 16px;

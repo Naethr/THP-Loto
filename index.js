@@ -1,5 +1,6 @@
 const resultElement = document.querySelector("#result");
 const lotoForm = document.querySelector("#loto-form");
+const devModeWinElement = document.querySelector("#dev-mode-win");
 
 const displayResult = (message) => {
   resultElement.textContent = message;
@@ -79,9 +80,11 @@ const checkLoto = (firstname, lastname, email, lotoNumbers) => {
     return;
   }
 
-  const winningNumbers = generateWinningNumbers();
+  const winningNumbers = devModeWinElement.checked
+    ? [...lotoNumbers]
+    : generateWinningNumbers();
 
-  // Pour tester la victoire, remplacer temporairement le tirage aléatoire par :
+  // Pour tester la victoire sans la checkbox, remplacer temporairement la ligne ci-dessus par :
   // const winningNumbers = [1, 2, 3, 4, 5, 6];
 
   if (hasWinningGrid(lotoNumbers, winningNumbers)) {
